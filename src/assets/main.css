@@ -9,11 +9,21 @@
   --white-rose2: #f6ddf4;
   --light-rose: #eec4e9;
   --rose: #e5aadd;
-  --rose2: #e5aadd;
+  --rose2: #ea5dd7;
+  --dark:#1f1c1f;
 }
 html, 
 body {
   background-color: var(--white-rose);
   width: 100vw;
-  height: 100vh;
+}
+.d-flex {
+  display: flex;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, 
+  body {
+  background-color: var(--dark);
+}
 }

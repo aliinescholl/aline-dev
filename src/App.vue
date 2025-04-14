@@ -5,28 +5,60 @@ import Footer from './components/Footer.vue';
 
 <template>
   <header class="header">
-    <NavBar></NavBar>
+    <NavBar />
   </header>
 
-  <main>
-    <section></section>
+  <main style="width: 100%;">
+    <section class="centralize" style="width: 100vw;">
+      <div class="container centralize">
+          <div class="d-flex" style="gap: 40px">
+              <img 
+                class="profile-image"
+                src="https://avatars.githubusercontent.com/u/76217058?v=4" 
+                alt="imagem" 
+              />
+              <div class="centralize" style="align-items: center; flex-direction: column;">
+                <h1 style="color: var(--rose2)">👩‍💻 Aline Scholl Santos — Desenvolvedora Full Stack</h1>
+                <p style="color: var(--light-rose)">Transformando ideias em soluções com código, café e paixão por tecnologia.</p> 
+              </div>
+            </div>
+      </div>
+    </section>
+
     <section></section>
     <section></section>
     <section></section>
   </main>
 
   <footer>
-    <Footer></Footer>
+    <Footer />
   </footer>
 </template>
 
 <style scoped>
   .header {
     height: 8vh;
-    background-color: var(--light-rose);
+    background-color: #1a181a;
+  }
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px white;
   }
 
   .footer {
     height: 8vh;    
   }
+
+  .container {
+    width: 80vw;
+  }
+
+  .centralize {
+    display: flex; 
+    justify-content: center;
+  }
+
 </style>
