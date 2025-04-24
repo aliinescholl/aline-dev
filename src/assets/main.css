@@ -4,26 +4,63 @@
   box-sizing: border-box;
   font-family: "Roboto Slab", serif;  
 }
+
 :root {
   --white-rose: #fff6ff;
   --white-rose2: #f6ddf4;
   --light-rose: #eec4e9;
   --rose: #e5aadd;
   --rose2: #ea5dd7;
-  --dark:#1f1c1f;
+  --dark: #1f1c1f;
 }
+
 html, 
 body {
   background-color: var(--white-rose);
   width: 100vw;
 }
+
 .d-flex {
   display: flex;
 }
 
+button {
+  position: relative;
+  background-color: var(--rose2); 
+  border: none;
+  font-size: medium;
+  padding: 10px;
+  color: var(--white-rose);
+  border-radius: 5px;
+  transition: 
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    color 0.4s linear;
+  overflow: hidden;
+}
+
+button::after {
+  content: " ➤";
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 5px 5px 10px var(--white-rose);
+  cursor: pointer;
+  transform: translateY(-2px);
+  background-color: #8f3883;
+}
+
+button:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+  
 @media (prefers-color-scheme: dark) {
   html, 
   body {
-  background-color: var(--dark);
-}
+    background-color: var(--dark);
+  }
 }
