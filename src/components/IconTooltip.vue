@@ -18,7 +18,7 @@
 <template>
   <li class="container">
     <a :href="props.linkRedirecionamento" style="color: black;">
-      <i :class="props.classeIcone + ' icone'"/>
+      <i :class="props.classeIcone + ' icone'" />
     </a>
     <span class="text">{{ props.textoTooltip }}</span>
   </li>

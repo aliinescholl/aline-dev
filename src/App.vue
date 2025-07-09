@@ -1,7 +1,8 @@
-<script setup lang="ts">
+<script setup>
 import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
-import IconTooltip from './components/IconTooltip.vue';
+import IconTooltip from '@/components/IconTooltip.vue';
+
 </script>
 
 <template>
