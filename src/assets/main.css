@@ -12,6 +12,8 @@
   --rose: #b176fd;
   --rose2: #8844ff;
   --dark: #1f1c1f;
+  --tablet-size: 768px;
+  --desktop-size: 1024px;
 }
 
 html, 
@@ -30,3 +32,9 @@ body {
     background-color: var(--dark);
   }
 }
+
+/* @media (min-width: 768px) {
+  body {
+    background-color: var(--rose);
+  }
+} */

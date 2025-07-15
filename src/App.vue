@@ -1,6 +1,7 @@
 <script setup>
 import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
+import Card from './components/Card.vue';
 import IconTooltip from './components/IconTooltip.vue';
 
 </script>
@@ -12,18 +13,27 @@ import IconTooltip from './components/IconTooltip.vue';
 
   <main style="width: 100%;">
     <section class="centralize" style="width: 100vw;">
-      <div class="container centralize">
-        <div class="d-flex" style="gap: 40px; margin-top: 30px;">
+      <div class="container">
+        <div class="d-flex" style="margin-top: 30px;">
           <img 
             class="profile-image"
             src="https://avatars.githubusercontent.com/u/76217058?v=4" 
             alt="Foto perfil do GitHub" 
           />
           <div class="centralize" style="align-items: center; flex-direction: column;">
-            <h1 style="color: var(--rose2)">👩‍💻 Aline Scholl Santos — Desenvolvedora Full Stack</h1>
+            <h1 style="color: var(--rose2)">Aline Scholl Santos</h1>
+            <h2 style="color: var(--rose2)">Desenvolvedora Full Stack</h2>
             <p style="color: var(--light-rose)">Transformando ideias em soluções com código, café e paixão por tecnologia.</p> 
-            <div class="d-flex" style="gap: 1vw; margin-top: 10px;">
-              <button style="background-color: var(--rose2); border: none; font-size: medium; padding: 10px; color: var(--white-rose); border-radius: 5px;">Entre em contato</button>
+            <div class="d-flex" style="gap: 2vw; margin-top: 10px;"> 
+              <IconTooltip
+                classe-icone="fa-brands fa-linkedin"
+                link-redirecionamento="https://www.linkedin.com/in/aliinescholl"
+              />
+
+              <IconTooltip
+                classe-icone="fa-brands fa-github"
+                link-redirecionamento="https://github.com/aliinescholl"
+              />
             </div>
           </div>
         </div>
@@ -35,49 +45,10 @@ import IconTooltip from './components/IconTooltip.vue';
         <h1 style="color: var(--rose2); padding-bottom: 10px;">Meus projetos</h1>
       </div>
 
-      <div class="centralize" style="align-items: center; gap: 20px;">
-        
-        <div style="height: 300px; width: 200px; background-color: var(--white-rose2); border-radius: 10%; align-items: center; display: flex; flex-direction: column; padding: 10px;">
-          <div style="width: 100%; height: 100%;">
-            <img src="././assets/midia/images/avestruz.jpg" alt="avestruz" style="max-height: 120px; max-width: 190px; border-radius: 10%;">
-            <h1 class="centralize">Título projeto</h1>
-            <p style="font-size: small;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eos eligendi, optio doloribus dignissimos alias nulla distinctio officia </p>
-            
-            <div style="display: flex; width: 100%; gap: 5px; justify-content: center;">
-              <IconTooltip
-                texto-tooltip="GitHub"
-                classe-icone="fa-brands fa-github"
-                link-redirecionamento="https://github.com/aliinescholl/aline-dev"
-              />
-              <IconTooltip
-                texto-tooltip="Deploy"
-                classe-icone="fa-solid fa-code"
-                link-redirecionamento="https://github.com/aliinescholl/aline-dev"
-              />
-            </div>
-            
-          </div>
-        </div>
-
-       <div style="height: 300px; width: 200px; background-color: var(--white-rose2); border-radius: 10%; align-items: center; display: flex; flex-direction: column; padding: 10px;">
-          <div style="width: 100%; height: 100%;">
-            <img src="././assets/midia/images/avestruz.jpg" alt="avestruz" style="max-height: 120px; max-width: 190px; border-radius: 10%;">
-            <h1 class="centralize">Título projeto</h1>
-            <p style="font-size: small;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eos eligendi, optio doloribus dignissimos alias nulla distinctio officia </p>
-            
-            <div style="display: flex;">
-              <IconTooltip
-                texto-tooltip="GitHub"
-                classe-icone="fa-brands fa-github"
-              />
-  
-              <IconTooltip
-                texto-tooltip="Deploy"
-                classe-icone="fa-solid fa-code"
-              />
-            </div>            
-          </div>
-        </div>
+      <div style="display: flex; align-items: center; flex-direction: column;">
+        <Card></Card>
+        <br>
+        <Card></Card>
       </div>
     </section>
 
@@ -114,6 +85,44 @@ import IconTooltip from './components/IconTooltip.vue';
   .centralize {
     display: flex; 
     justify-content: center;
+  }
+
+  @media (min-width: 425px) {
+    .header{
+      box-shadow: 5px 5px 20px rgb(44, 0, 73);
+    }
+
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      box-shadow: 5px 5px 30px rgb(44, 0, 73);
+    }
+
+    .container>div {
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 0.8rem;
+        text-align: center;
+        margin-bottom: 6px;
+        margin-top: 12px;
+      }
+
+      img {
+        margin-bottom: 15px;
+      }
+    }
   }
 
 </style>
