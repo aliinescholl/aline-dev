@@ -115,7 +115,7 @@ import IconTooltip from './components/IconTooltip.vue';
   }
 
   .tag{
-    padding: 5px;
+    padding: 8px;
     background-color: var(--light-rose);
     border-radius: 15px;
     color: rgb(44, 0, 73);
