@@ -11,7 +11,7 @@ import IconTooltip from './components/IconTooltip.vue';
     <NavBar />
   </header>
 
-  <main style="width: 100%;">
+  <main style="width: 100vw;">
     <section class="centralize" style="width: 100vw;">
       <div class="container">
         <div class="d-flex" style="margin-top: 30px;">
@@ -39,10 +39,39 @@ import IconTooltip from './components/IconTooltip.vue';
         </div>
       </div>
     </section>
+
     <hr style="margin: 20px 50px 10px 50px">
-    <section class="centralize" style="width: 100vw;  display: flex; flex-direction: column;">  
-      <div class="centralize">
-        <h1 style="color: var(--rose2); padding-bottom: 10px;">Meus projetos</h1>
+
+    <section style="width: 100vw; flex-direction: column;" class="centralize">
+      <h1 style="color: var(--rose2); text-align: center; margin-bottom: 1rem;">Competências</h1>
+       <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+        <div class="tag">C#</div>
+        <div class="tag">Asp .Net</div>
+        <div class="tag">Entity Framework</div>
+        <div class="tag">Quartz</div>
+        <div class="tag">Git</div>
+        <div class="tag">GitHub</div>
+        <div class="tag">HTML</div>
+        <div class="tag">Vue Js</div>
+        <div class="tag">JavaScript</div>
+        <div class="tag">TypeScript</div>
+        <div class="tag">Scrum</div>
+        <div class="tag">KanBan</div>
+        <div class="tag">PostgreSql</div>
+        <div class="tag">Vuetify</div>
+        <div class="tag">CSS</div>
+        <div class="tag">BootStrap</div>
+        <div class="tag">SQL</div>
+        <div class="tag">Metodologias ágeis</div>
+        <div class="tag">Delphi</div>
+        <div class="tag">Unigui</div>
+      </div>
+    </section>
+
+    <hr style="margin: 20px 50px 10px 50px">
+    <section style="width: 100vw;">  
+      <div>
+        <h1 style="color: var(--rose2); padding-bottom: 10px; text-align: center;">Meus projetos</h1>
       </div>
 
       <div style="display: flex; align-items: center; flex-direction: column;">
@@ -52,8 +81,6 @@ import IconTooltip from './components/IconTooltip.vue';
       </div>
     </section>
 
-    <!-- <section>sobre</section> -->
-    <!-- <section>contatos</section> -->
   </main>
 
   <footer>
@@ -87,16 +114,26 @@ import IconTooltip from './components/IconTooltip.vue';
     justify-content: center;
   }
 
+  .tag{
+    padding: 5px;
+    background-color: var(--light-rose);
+    border-radius: 15px;
+    color: rgb(44, 0, 73);
+    box-shadow: 5px 5px 20px rgb(83, 15, 128);
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
   @media (min-width: 425px) {
     .header{
-      box-shadow: 5px 5px 20px rgb(44, 0, 73);
+      box-shadow: 5px 5px 10px rgb(44, 0, 73);
     }
 
     .profile-image {
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      box-shadow: 5px 5px 30px rgb(44, 0, 73);
+      box-shadow: 5px 5px 30px ;
     }
 
     .container>div {
